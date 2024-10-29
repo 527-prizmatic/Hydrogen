@@ -21,9 +21,11 @@ private:
 
 	static bool stateChangePending;
 	static enum GameState nextState;
+	static ctrl::Mouse mouseCtrl;
 
 	static void initFirst();
 	static void initState();
+
 
 public:
 	static void init();

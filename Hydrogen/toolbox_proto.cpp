@@ -1,4 +1,5 @@
 #include "toolbox_proto.hpp"
+#include "Window.hpp"
 
 namespace tutil {
 	sf::Clock clock;
@@ -29,5 +30,25 @@ namespace vect {
 
 	sf::Vector2f polToRec(sf::Vector2f _v) {
 		return sf::Vector2f();
+	}
+}
+
+namespace ctrl {
+	Mouse::Mouse() {
+		this->window = nullptr;
+	}
+
+	Mouse::Mouse(class Window* _window) {
+		this->window = _window;
+	}
+
+	bool Mouse::lClick() {
+		if (this->window) return this->window->hasFocus() && sf::Mouse::isButtonPressed(sf::Mouse::Left);
+		else return sf::Mouse::isButtonPressed(sf::Mouse::Left);
+	}
+
+	bool Mouse::rClick() {
+		if (this->window) return this->window->hasFocus() && sf::Mouse::isButtonPressed(sf::Mouse::Right);
+		else return sf::Mouse::isButtonPressed(sf::Mouse::Right);
 	}
 }

@@ -26,6 +26,7 @@ public:
 	void draw(sf::Drawable& _obj);
 
 	bool isOpen() { return this->window->isOpen(); }
+	bool hasFocus() { return this->window->hasFocus(); }
 	sf::Vector2u getSize() { return this->size; }
 
 	// Discarded that one, too error-prone

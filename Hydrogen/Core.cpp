@@ -7,6 +7,7 @@ bool Core::firstInit = true;
 Window Core::window;
 bool Core::stateChangePending = false;
 enum GameState Core::nextState = NONE;
+ctrl::Mouse Core::mouseCtrl;
 
 void Core::init() {
 	if (firstInit) initFirst();
@@ -16,6 +17,7 @@ void Core::init() {
 void Core::initFirst() {
 	firstInit = false;
 	Core::window = Window(800U, 600U, "pavouk", false);
+	Core::mouseCtrl.setWindow(&Core::window);
 }
 
 void Core::initState() {
@@ -42,7 +44,7 @@ void Core::update() {
 
 	}
 	else if (state == GameState::MENU) {
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::B)) requestStateChange(GameState::GAME);
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::B) || mouseCtrl.lClick()) requestStateChange(GameState::GAME);
 	}
 	else if (state == GameState::GAME) {
 		BouncingBox::updateAll(window);
