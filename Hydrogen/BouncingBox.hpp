@@ -1,7 +1,7 @@
 #pragma once
 #include <vector>
 
-#include "toolbox_proto.hpp"
+#include "toolbox/toolbox.hpp"
 #include "Window.hpp"
 
 class BouncingBox {

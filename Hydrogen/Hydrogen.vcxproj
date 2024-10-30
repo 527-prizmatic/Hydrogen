@@ -145,7 +145,8 @@
     <ClCompile Include="controls\Mouse.cpp" />
     <ClCompile Include="Core.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="toolbox_proto.cpp" />
+    <ClCompile Include="toolbox\time.cpp" />
+    <ClCompile Include="toolbox\custom_math.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -153,7 +154,9 @@
     <ClInclude Include="controls\Keyboard.hpp" />
     <ClInclude Include="controls\Mouse.hpp" />
     <ClInclude Include="Core.hpp" />
-    <ClInclude Include="toolbox_proto.hpp" />
+    <ClInclude Include="toolbox\time.hpp" />
+    <ClInclude Include="toolbox\toolbox.hpp" />
+    <ClInclude Include="toolbox\custom_math.hpp" />
     <ClInclude Include="Window.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

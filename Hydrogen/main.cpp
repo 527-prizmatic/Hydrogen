@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 
-#include "toolbox_proto.hpp"
 #include "Core.hpp"
 
 int main(int argc, char** argv) {

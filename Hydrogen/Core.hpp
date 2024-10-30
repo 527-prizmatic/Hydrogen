@@ -1,5 +1,5 @@
 #pragma once
-#include "toolbox_proto.hpp"
+#include "toolbox/toolbox.hpp"
 #include "Window.hpp"
 #include "controls/Mouse.hpp"
 #include "controls/Keyboard.hpp"

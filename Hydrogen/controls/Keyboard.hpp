@@ -1,8 +1,8 @@
 #pragma once
-#include "../toolbox_proto.hpp"
+#include "../toolbox/toolbox.hpp"
 #include <vector>
 
-extern class Window;
+class Window;
 
 namespace ctrl {
 	class KeyEntry {
@@ -30,8 +30,8 @@ namespace ctrl {
 		std::vector<KeyEntry> keyReg;
 	public:
 		Keyboard();
-		Keyboard(class Window* _window);
-		void setWindow(class Window* _window) { this->window = _window; }
+		Keyboard(Window* _window);
+		void setWindow(Window* _window) { this->window = _window; }
 
 		Keyboard& addKey(std::string _str, sf::Keyboard::Key _key);
 		Keyboard& setKey(std::string _str, sf::Keyboard::Key _key);

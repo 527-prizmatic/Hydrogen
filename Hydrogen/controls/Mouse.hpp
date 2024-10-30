@@ -1,7 +1,7 @@
 #pragma once
-#include "../toolbox_proto.hpp"
+#include "../toolbox/toolbox.hpp"
 
-extern class Window;
+class Window;
 
 namespace ctrl {
 	class Mouse {
@@ -13,8 +13,8 @@ namespace ctrl {
 
 	public:
 		Mouse();
-		Mouse(class Window* _window);
-		void setWindow(class Window* _window) { this->window = _window; }
+		Mouse(Window* _window);
+		void setWindow(Window* _window) { this->window = _window; }
 
 		void update();
 

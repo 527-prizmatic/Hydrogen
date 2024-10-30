@@ -8,7 +8,7 @@ BouncingBox::BouncingBox(sf::Vector2f _pos, sf::Vector2f _size) {
 	this->pos = _pos;
 	this->vel = sf::Vector2f(100.f, 90.f);
 	this->size = _size;
-	this->id = BouncingBox::list.size();
+	this->id = (int)BouncingBox::list.size();
 }
 
 BouncingBox::BouncingBox(sf::Vector2f _pos, sf::Vector2f _vel, sf::Vector2f _size) {
@@ -16,7 +16,7 @@ BouncingBox::BouncingBox(sf::Vector2f _pos, sf::Vector2f _vel, sf::Vector2f _siz
 	this->pos = _pos;
 	this->vel = _vel;
 	this->size = _size;
-	this->id = BouncingBox::list.size();
+	this->id = (int)BouncingBox::list.size();
 }
 
 void BouncingBox::create(BouncingBox _box) {
@@ -102,5 +102,6 @@ sf::Color BouncingBox::getColor() {
 		case CLR_CYN: return sf::Color::Cyan;
 		case CLR_BLU: return sf::Color::Blue;
 		case CLR_MGT: return sf::Color::Magenta;
+		default: return sf::Color::Black;
 	}
 }
