@@ -1,23 +1,17 @@
 #include "Core.hpp"
 #include "BouncingBox.hpp"
 
-GameState Core::state = GAME;
-bool Core::initPending = true;
-bool Core::firstInit = true;
-Window Core::window;
-bool Core::stateChangePending = false;
-enum GameState Core::nextState = NONE;
-ctrl::Mouse Core::mouseCtrl;
-
-void Core::init() {
-	if (firstInit) initFirst();
-	if (initPending) initState();
+Core::Core() {
+	this->window = Window(800U, 600U, "pavouk", false);
+	this->mouse.setWindow(&this->window);
+	this->state = GAME;
+	this->nextState = NONE;
+	this->initPending = true;
+	this->stateChangePending = false;
 }
 
-void Core::initFirst() {
-	firstInit = false;
-	Core::window = Window(800U, 600U, "pavouk", false);
-	Core::mouseCtrl.setWindow(&Core::window);
+void Core::init() {
+	if (initPending) initState();
 }
 
 void Core::initState() {
@@ -39,16 +33,17 @@ void Core::initState() {
 void Core::update() {
 	tutil::restart();
 	window.update();
+	mouse.update();
 
 	if (state == GameState::INTRO) {
 
 	}
 	else if (state == GameState::MENU) {
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::B) || mouseCtrl.lClick()) requestStateChange(GameState::GAME);
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::B) || mouse.clicked(sf::Mouse::Left)) requestStateChange(GameState::GAME);
 	}
 	else if (state == GameState::GAME) {
 		BouncingBox::updateAll(window);
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A)) requestStateChange(GameState::MENU);
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A) || mouse.clicked(sf::Mouse::Left)) requestStateChange(GameState::MENU);
 	}
 	
 }

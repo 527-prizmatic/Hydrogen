@@ -1,6 +1,7 @@
 #pragma once
 #include "toolbox_proto.hpp"
 #include "Window.hpp"
+#include "MouseCtrls.hpp"
 
 typedef enum GameState GameState;
 enum GameState {
@@ -14,31 +15,29 @@ enum GameState {
 
 class Core {
 private:
-	static enum GameState state;
-	static bool initPending;
-	static bool firstInit;
-	static Window window;
+	enum GameState state;
+	bool initPending;
+	Window window;
 
-	static bool stateChangePending;
-	static enum GameState nextState;
-	static ctrl::Mouse mouseCtrl;
+	bool stateChangePending;
+	enum GameState nextState;
+	MouseCtrls mouse;
 
-	static void initFirst();
-	static void initState();
-
-
+	void initState();
 public:
-	static void init();
-	static void update();
-	static void render();
-	static void unload();
+	Core();
 
-	static GameState getState() { return Core::state; }
-	static void requestStateChange(GameState _s);
-	static void changeState();
+	void init();
+	void update();
+	void render();
+	void unload();
 
-	static bool windowIsOpen() { return window.isOpen(); }
-	static void beginRendering();
-	static void endRendering();
+	GameState getState() { return this->state; }
+	void requestStateChange(GameState _s);
+	void changeState();
+
+	bool windowIsOpen() { return this->window.isOpen(); }
+	void beginRendering();
+	void endRendering();
 };
 

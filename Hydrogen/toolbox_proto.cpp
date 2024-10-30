@@ -32,23 +32,3 @@ namespace vect {
 		return sf::Vector2f();
 	}
 }
-
-namespace ctrl {
-	Mouse::Mouse() {
-		this->window = nullptr;
-	}
-
-	Mouse::Mouse(class Window* _window) {
-		this->window = _window;
-	}
-
-	bool Mouse::lClick() {
-		if (this->window) return this->window->hasFocus() && sf::Mouse::isButtonPressed(sf::Mouse::Left);
-		else return sf::Mouse::isButtonPressed(sf::Mouse::Left);
-	}
-
-	bool Mouse::rClick() {
-		if (this->window) return this->window->hasFocus() && sf::Mouse::isButtonPressed(sf::Mouse::Right);
-		else return sf::Mouse::isButtonPressed(sf::Mouse::Right);
-	}
-}

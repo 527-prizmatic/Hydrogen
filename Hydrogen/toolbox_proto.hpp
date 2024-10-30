@@ -15,17 +15,3 @@ namespace vect {
 
 	sf::Vector2f normalize(sf::Vector2f _v);
 }
-
-namespace ctrl {
-	class Mouse {
-	private:
-		class Window* window;
-
-	public:
-		Mouse();
-		Mouse(class Window* _window);
-		void setWindow(class Window* _window) { this->window = _window; }
-		bool lClick();
-		bool rClick();
-	};
-}

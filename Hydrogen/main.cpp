@@ -5,16 +5,16 @@
 #include "Core.hpp"
 
 int main(int argc, char** argv) {
-	Core::init();
+	Core core;
 		
-	while (Core::windowIsOpen()) {
-		Core::init();
-		Core::update();
+	while (core.windowIsOpen()) {
+		core.init();
+		core.update();
 
-		Core::beginRendering();
-		Core::render();
-		Core::endRendering();
+		core.beginRendering();
+		core.render();
+		core.endRendering();
 
-		Core::changeState();
+		core.changeState();
 	}
 }

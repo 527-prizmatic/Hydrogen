@@ -143,12 +143,14 @@
     <ClCompile Include="BouncingBox.cpp" />
     <ClCompile Include="Core.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MouseCtrls.cpp" />
     <ClCompile Include="toolbox_proto.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BouncingBox.hpp" />
     <ClInclude Include="Core.hpp" />
+    <ClInclude Include="MouseCtrls.hpp" />
     <ClInclude Include="toolbox_proto.hpp" />
     <ClInclude Include="Window.hpp" />
   </ItemGroup>
