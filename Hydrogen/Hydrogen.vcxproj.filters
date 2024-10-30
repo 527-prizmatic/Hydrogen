@@ -13,6 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\Engine">
+      <UniqueIdentifier>{3d098914-3002-47a7-a29b-15117cc2ae33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Engine">
+      <UniqueIdentifier>{4dce2f45-9221-473d-9261-a2132800c356}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine\Controls">
+      <UniqueIdentifier>{532e2df8-04ba-49e1-993d-665907ab46a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Engine\Controls">
+      <UniqueIdentifier>{07d21a68-0648-44cd-8ca7-d044c528ddc6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -30,8 +42,11 @@
     <ClCompile Include="Core.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MouseCtrls.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="controls\Mouse.cpp">
+      <Filter>Source Files\Engine\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="controls\Keyboard.cpp">
+      <Filter>Source Files\Engine\Controls</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -47,8 +62,11 @@
     <ClInclude Include="Core.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MouseCtrls.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="controls\Mouse.hpp">
+      <Filter>Header Files\Engine\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="controls\Keyboard.hpp">
+      <Filter>Header Files\Engine\Controls</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

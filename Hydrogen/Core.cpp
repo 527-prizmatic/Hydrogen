@@ -1,13 +1,20 @@
 #include "Core.hpp"
 #include "BouncingBox.hpp"
 
+const std::string KeyOpenMenu = "OpenMenu";
+const std::string KeyOpenGame = "OpenGame";
+
 Core::Core() {
 	this->window = Window(800U, 600U, "pavouk", false);
 	this->mouse.setWindow(&this->window);
+	this->kb.setWindow(&this->window);
 	this->state = GAME;
 	this->nextState = NONE;
 	this->initPending = true;
 	this->stateChangePending = false;
+
+	this->kb.addKey(KeyOpenMenu, sf::Keyboard::Key::B);
+	this->kb.addKey(KeyOpenGame, sf::Keyboard::Key::A);
 }
 
 void Core::init() {
@@ -32,18 +39,20 @@ void Core::initState() {
 
 void Core::update() {
 	tutil::restart();
-	window.update();
-	mouse.update();
+	this->window.update();
+	this->mouse.update();
+	this->kb.update();
 
 	if (state == GameState::INTRO) {
 
 	}
 	else if (state == GameState::MENU) {
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::B) || mouse.clicked(sf::Mouse::Left)) requestStateChange(GameState::GAME);
+		if (this->kb.pressed(KeyOpenGame) || mouse.clicked(sf::Mouse::Left)) requestStateChange(GameState::GAME);
 	}
 	else if (state == GameState::GAME) {
 		BouncingBox::updateAll(window);
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A) || mouse.clicked(sf::Mouse::Left)) requestStateChange(GameState::MENU);
+		if (this->kb.pressed(KeyOpenMenu) || mouse.clicked(sf::Mouse::Left)) requestStateChange(GameState::MENU);
+		if (this->mouse.clicked(sf::Mouse::Right)) this->kb.setKey(KeyOpenMenu, sf::Keyboard::Key::R);
 	}
 	
 }

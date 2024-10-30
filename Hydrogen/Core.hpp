@@ -1,7 +1,8 @@
 #pragma once
 #include "toolbox_proto.hpp"
 #include "Window.hpp"
-#include "MouseCtrls.hpp"
+#include "controls/Mouse.hpp"
+#include "controls/Keyboard.hpp"
 
 typedef enum GameState GameState;
 enum GameState {
@@ -21,7 +22,8 @@ private:
 
 	bool stateChangePending;
 	enum GameState nextState;
-	MouseCtrls mouse;
+	ctrl::Mouse mouse;
+	ctrl::Keyboard kb;
 
 	void initState();
 public:
