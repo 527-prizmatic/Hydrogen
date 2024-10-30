@@ -1,6 +1,9 @@
 #include "Core.hpp"
 #include "BouncingBox.hpp"
 
+#include "states/Menu.hpp"
+#include "states/Game.hpp"
+
 const std::string KeyOpenMenu = "OpenMenu";
 const std::string KeyOpenGame = "OpenGame";
 
@@ -15,6 +18,9 @@ Core::Core() {
 
 	this->kb.addKey(KeyOpenMenu, sf::Keyboard::Key::B);
 	this->kb.addKey(KeyOpenGame, sf::Keyboard::Key::A);
+
+	this->registerState(MENU, (states::State*)(new states::Menu(this)));
+	this->registerState(GAME, (states::State*)(new states::Game(this)));
 }
 
 void Core::init() {
@@ -23,18 +29,7 @@ void Core::init() {
 
 void Core::initState() {
 	initPending = false;
-
-	if (state == GameState::INTRO) {
-
-	}
-	else if (state == GameState::MENU) {
-
-	}
-	else if (state == GameState::GAME) {
-		for (int i = 0; i < 100; i++) {
-			BouncingBox::create(BouncingBox(sf::Vector2f(rand() % 600 + 50.f, rand() % 400 + 50.f), vect::normalize(sf::Vector2f(rand() % 201 - 100.f, rand() % 201 - 100.f)) * 100.f, sf::Vector2f(10.f, 10.f)));
-		}
-	}
+	this->stateReg[this->state]->init();
 }
 
 void Core::update() {
@@ -42,44 +37,21 @@ void Core::update() {
 	this->window.update();
 	this->mouse.update();
 	this->kb.update();
-
-	if (state == GameState::INTRO) {
-
-	}
-	else if (state == GameState::MENU) {
-		if (this->kb.pressed(KeyOpenGame) || mouse.clicked(sf::Mouse::Left)) requestStateChange(GameState::GAME);
-	}
-	else if (state == GameState::GAME) {
-		BouncingBox::updateAll(window);
-		if (this->kb.pressed(KeyOpenMenu) || mouse.clicked(sf::Mouse::Left)) requestStateChange(GameState::MENU);
-		if (this->mouse.clicked(sf::Mouse::Right)) this->kb.setKey(KeyOpenMenu, sf::Keyboard::Key::R);
-	}
 	
+	this->stateReg[this->state]->update();
 }
 
 void Core::render() {
-
-	if (state == GameState::INTRO) {
-
-	}
-	else if (state == GameState::MENU) {
-
-	}
-	else if (state == GameState::GAME) {
-		BouncingBox::renderAll(window);
-	}
+	this->stateReg[this->state]->render();
 }
 
 void Core::unload() {
-	if (state == GameState::INTRO) {
+	this->stateReg[this->state]->unload();
+}
 
-	}
-	else if (state == GameState::MENU) {
-
-	}
-	else if (state == GameState::GAME) {
-		BouncingBox::clearList();
-	}
+Core& Core::registerState(GameState _id, states::State* _state) {
+	this->stateReg.emplace(_id, _state);
+	return *this;
 }
 
 void Core::requestStateChange(GameState _s) {
@@ -95,7 +67,6 @@ void Core::changeState() {
 		Core::unload();
 		state = nextState;
 		initPending = true;
-		Core::init();
 		nextState = NONE;
 	}
 }

@@ -145,6 +145,10 @@
     <ClCompile Include="controls\Mouse.cpp" />
     <ClCompile Include="Core.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="states\Game.cpp" />
+    <ClCompile Include="states\Menu.cpp" />
+    <ClCompile Include="toolbox\interpolation.cpp" />
+    <ClCompile Include="toolbox\random.cpp" />
     <ClCompile Include="toolbox\time.cpp" />
     <ClCompile Include="toolbox\custom_math.cpp" />
     <ClCompile Include="Window.cpp" />
@@ -154,6 +158,11 @@
     <ClInclude Include="controls\Keyboard.hpp" />
     <ClInclude Include="controls\Mouse.hpp" />
     <ClInclude Include="Core.hpp" />
+    <ClInclude Include="states\Game.hpp" />
+    <ClInclude Include="states\Menu.hpp" />
+    <ClInclude Include="states\State.hpp" />
+    <ClInclude Include="toolbox\interpolation.hpp" />
+    <ClInclude Include="toolbox\random.hpp" />
     <ClInclude Include="toolbox\time.hpp" />
     <ClInclude Include="toolbox\toolbox.hpp" />
     <ClInclude Include="toolbox\custom_math.hpp" />

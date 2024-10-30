@@ -31,18 +31,18 @@
     <Filter Include="Header Files\Engine\Toolbox">
       <UniqueIdentifier>{bd7303d5-d92d-4105-a37c-7e302ccec8f5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\State Machine">
+      <UniqueIdentifier>{384a50f5-de68-47a9-84a3-6618feadf51a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\State Machine">
+      <UniqueIdentifier>{17fdd027-7914-4975-8913-ac04ffece0c2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="BouncingBox.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Window.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Core.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="controls\Mouse.cpp">
@@ -57,15 +57,27 @@
     <ClCompile Include="toolbox\custom_math.cpp">
       <Filter>Source Files\Engine\Toolbox</Filter>
     </ClCompile>
+    <ClCompile Include="toolbox\interpolation.cpp">
+      <Filter>Source Files\Engine\Toolbox</Filter>
+    </ClCompile>
+    <ClCompile Include="toolbox\random.cpp">
+      <Filter>Source Files\Engine\Toolbox</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>Source Files\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Core.cpp">
+      <Filter>Source Files\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="states\Game.cpp">
+      <Filter>Source Files\State Machine</Filter>
+    </ClCompile>
+    <ClCompile Include="states\Menu.cpp">
+      <Filter>Source Files\State Machine</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BouncingBox.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Window.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Core.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="controls\Mouse.hpp">
@@ -82,6 +94,27 @@
     </ClInclude>
     <ClInclude Include="toolbox\custom_math.hpp">
       <Filter>Header Files\Engine\Toolbox</Filter>
+    </ClInclude>
+    <ClInclude Include="toolbox\interpolation.hpp">
+      <Filter>Header Files\Engine\Toolbox</Filter>
+    </ClInclude>
+    <ClInclude Include="toolbox\random.hpp">
+      <Filter>Header Files\Engine\Toolbox</Filter>
+    </ClInclude>
+    <ClInclude Include="Core.hpp">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.hpp">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="states\State.hpp">
+      <Filter>Header Files\State Machine</Filter>
+    </ClInclude>
+    <ClInclude Include="states\Game.hpp">
+      <Filter>Header Files\State Machine</Filter>
+    </ClInclude>
+    <ClInclude Include="states\Menu.hpp">
+      <Filter>Header Files\State Machine</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

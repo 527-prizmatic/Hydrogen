@@ -6,6 +6,7 @@
 #include "random.hpp"
 #include "custom_math.hpp"
 #include "interpolation.hpp"
+#include "../controls/Controls.hpp"
 
 namespace ctrl {
 	typedef enum ButtonState {
