@@ -1,6 +1,11 @@
 #pragma once
-#include "toolbox_proto.hpp"
+#include <unordered_map>
+#include "toolbox/toolbox.hpp"
 #include "Window.hpp"
+#include "controls/Mouse.hpp"
+#include "controls/Keyboard.hpp"
+#include "states/State.hpp"
+
 
 typedef enum GameState GameState;
 enum GameState {
@@ -14,31 +19,35 @@ enum GameState {
 
 class Core {
 private:
-	static enum GameState state;
-	static bool initPending;
-	static bool firstInit;
-	static Window window;
+	std::unordered_map<enum GameState, states::State*> stateReg;
+	enum GameState state;
+	bool initPending;
+	Window window;
 
-	static bool stateChangePending;
-	static enum GameState nextState;
-	static ctrl::Mouse mouseCtrl;
+	bool stateChangePending;
+	enum GameState nextState;
+	ctrl::Mouse mouse;
+	ctrl::Keyboard kb;
 
-	static void initFirst();
-	static void initState();
-
-
+	void initState();
 public:
-	static void init();
-	static void update();
-	static void render();
-	static void unload();
+	Core();
 
-	static GameState getState() { return Core::state; }
-	static void requestStateChange(GameState _s);
-	static void changeState();
+	void init();
+	void update();
+	void render();
+	void unload();
 
-	static bool windowIsOpen() { return window.isOpen(); }
-	static void beginRendering();
-	static void endRendering();
+	Core& registerState(GameState _id, states::State* _state);
+	GameState getState() { return this->state; }
+	void requestStateChange(GameState _s);
+	void changeState();
+
+	bool windowIsOpen() { return this->window.isOpen(); }
+	Window& getWindow() { return this->window; }
+	ctrl::Mouse& getMouse() { return this->mouse; }
+	ctrl::Keyboard& getKeyboard() { return this->kb; }
+	void beginRendering();
+	void endRendering();
 };
 

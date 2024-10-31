@@ -1,6 +1,6 @@
 #pragma once
 #include <string>
-#include "toolbox_proto.hpp"
+#include "toolbox/toolbox.hpp"
 
 class Window {
 private:
