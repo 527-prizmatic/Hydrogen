@@ -75,6 +75,9 @@
     <ClCompile Include="states\Menu.cpp">
       <Filter>Source Files\State Machine</Filter>
     </ClCompile>
+    <ClCompile Include="Preinit.cpp">
+      <Filter>Source Files\Engine</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BouncingBox.hpp">
@@ -115,6 +118,9 @@
     </ClInclude>
     <ClInclude Include="states\Menu.hpp">
       <Filter>Header Files\State Machine</Filter>
+    </ClInclude>
+    <ClInclude Include="Preinit.hpp">
+      <Filter>Header Files\Engine</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

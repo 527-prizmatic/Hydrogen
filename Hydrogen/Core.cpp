@@ -1,11 +1,6 @@
 #include "Core.hpp"
 #include "BouncingBox.hpp"
-
-#include "states/Menu.hpp"
-#include "states/Game.hpp"
-
-const std::string KeyOpenMenu = "OpenMenu";
-const std::string KeyOpenGame = "OpenGame";
+#include "Preinit.hpp"
 
 Core::Core() {
 	this->window = Window(800U, 600U, "pavouk", false);
@@ -16,11 +11,8 @@ Core::Core() {
 	this->initPending = true;
 	this->stateChangePending = false;
 
-	this->kb.addKey(KeyOpenMenu, sf::Keyboard::Key::B);
-	this->kb.addKey(KeyOpenGame, sf::Keyboard::Key::A);
-
-	this->registerState(MENU, (states::State*)(new states::Menu(this)));
-	this->registerState(GAME, (states::State*)(new states::Game(this)));
+	preinit(*this);
+	registerControls(*this);
 }
 
 void Core::init() {
