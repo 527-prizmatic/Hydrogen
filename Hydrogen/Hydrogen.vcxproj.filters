@@ -37,6 +37,12 @@
     <Filter Include="Source Files\State Machine">
       <UniqueIdentifier>{17fdd027-7914-4975-8913-ac04ffece0c2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Engine\Core Systems">
+      <UniqueIdentifier>{f9e47dd5-b8ef-4212-a5cd-6ec3d35fe040}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Engine\Core Systems">
+      <UniqueIdentifier>{56218a91-127a-48d9-9901-70caa41f1ed4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -63,12 +69,6 @@
     <ClCompile Include="toolbox\random.cpp">
       <Filter>Source Files\Engine\Toolbox</Filter>
     </ClCompile>
-    <ClCompile Include="Window.cpp">
-      <Filter>Source Files\Engine</Filter>
-    </ClCompile>
-    <ClCompile Include="Core.cpp">
-      <Filter>Source Files\Engine</Filter>
-    </ClCompile>
     <ClCompile Include="states\Game.cpp">
       <Filter>Source Files\State Machine</Filter>
     </ClCompile>
@@ -77,6 +77,12 @@
     </ClCompile>
     <ClCompile Include="Preinit.cpp">
       <Filter>Source Files\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Core.cpp">
+      <Filter>Source Files\Engine\Core Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>Source Files\Engine\Core Systems</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -104,12 +110,6 @@
     <ClInclude Include="toolbox\random.hpp">
       <Filter>Header Files\Engine\Toolbox</Filter>
     </ClInclude>
-    <ClInclude Include="Core.hpp">
-      <Filter>Header Files\Engine</Filter>
-    </ClInclude>
-    <ClInclude Include="Window.hpp">
-      <Filter>Header Files\Engine</Filter>
-    </ClInclude>
     <ClInclude Include="states\State.hpp">
       <Filter>Header Files\State Machine</Filter>
     </ClInclude>
@@ -121,6 +121,12 @@
     </ClInclude>
     <ClInclude Include="Preinit.hpp">
       <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.hpp">
+      <Filter>Header Files\Engine\Core Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="Core.hpp">
+      <Filter>Header Files\Engine\Core Systems</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
