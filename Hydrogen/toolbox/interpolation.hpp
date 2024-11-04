@@ -6,12 +6,14 @@
 namespace itp {
 	/// Scalar interpolation
 	template <typename T> T scalar(T _a, T _b, float _t, float _method(float _x)) {
+		static_assert(std::is_arithmetic_v<T>, "Attempted interpolation with non-arithmetic values");
 		float it = _method(_t);
 		return ITP(_a, _b, it);
 	}
 
 	/// Two-dimensional vector interpolation
 	template <typename T> sf::Vector2<T> vector(sf::Vector2<T> _a, sf::Vector2<T> _b, float _t, float _method(float _x)) {
+		static_assert(std::is_arithmetic_v<T>, "Attempted interpolation with non-arithmetic values");
 		float it = _method(_t);
 		return sf::Vector2<T>(ITP(_a.x, _b.x, it), ITP(_a.y, _b.y, it));
 	}

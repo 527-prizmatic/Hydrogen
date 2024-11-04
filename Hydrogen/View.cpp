@@ -8,8 +8,8 @@ View::View() {
 	this->view.setCenter(this->center);
 }
 
-View::View(Window& _w) {
-	this->size = sf::Vector2f(_w.getSize().x, _w.getSize().y);
+View::View(const Window& _w) {
+	this->size = sf::Vector2f(_w.getSize());
 	this->center = this->size / 2.f;
 	this->view.setSize(this->size);
 	this->view.setCenter(this->center);
