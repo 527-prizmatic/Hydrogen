@@ -1,3 +1,16 @@
+/// -------------------------------------------------------- ///
+///        == Hydrogen == Prototype C++ State Machine		 ///
+///   (C) 2024 J.Sebastien Toussaint - All Rights Reserved	 ///
+/// -------------------------------------------------------- ///
+///                  == FILE DESCRIPTION ==					 ///
+///  The core of the state machine is based off a registry	 ///
+///  system allowing to "register" game states to make		 ///
+///  switching between states quick and easy. Also comes	 ///
+///  with basic garbage collection utilities, although most	 ///
+///  of that still needs to be implemented manually when	 ///
+///  designing an individual game state.					 ///
+/// -------------------------------------------------------- ///
+
 #pragma once
 #include <unordered_map>
 #include "toolbox/toolbox.hpp"

@@ -1,3 +1,12 @@
+/// -------------------------------------------------------- ///
+///        == Hydrogen == Prototype C++ State Machine		 ///
+///   (C) 2024 J.Sebastien Toussaint - All Rights Reserved	 ///
+/// -------------------------------------------------------- ///
+///                  == FILE DESCRIPTION ==					 ///
+///  Game window wrapper, coming with many tools to help	 ///
+///  with window handling and rendering objects on-screen.	 ///
+/// -------------------------------------------------------- ///
+
 #pragma once
 #include "toolbox/toolbox.hpp"
 #include "View.hpp"

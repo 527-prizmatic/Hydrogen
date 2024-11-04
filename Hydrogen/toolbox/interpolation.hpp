@@ -1,3 +1,14 @@
+/// -------------------------------------------------------- ///
+///        == Hydrogen == Prototype C++ State Machine		 ///
+///   (C) 2024 J.Sebastien Toussaint - All Rights Reserved	 ///
+/// -------------------------------------------------------- ///
+///                  == FILE DESCRIPTION ==					 ///
+///  Library of interpolators, allowing to perform various	 ///
+///  types of interpolation on multiple data types.			 ///
+///  Obviously, these only support arithmetic types and		 ///
+///  their derivatives, such as sf::Colors.					 ///
+/// -------------------------------------------------------- ///
+
 #pragma once
 #include "toolbox.hpp"
 

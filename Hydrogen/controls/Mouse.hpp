@@ -1,3 +1,11 @@
+/// -------------------------------------------------------- ///
+///        == Hydrogen == Prototype C++ State Machine		 ///
+///   (C) 2024 J.Sebastien Toussaint - All Rights Reserved	 ///
+/// -------------------------------------------------------- ///
+///                  == FILE DESCRIPTION ==					 ///
+///  Simple mouse input handler.							 ///
+/// -------------------------------------------------------- ///
+
 #pragma once
 #include "../toolbox/toolbox.hpp"
 

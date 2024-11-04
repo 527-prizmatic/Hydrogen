@@ -1,3 +1,13 @@
+/// -------------------------------------------------------- ///
+///        == Hydrogen == Prototype C++ State Machine		 ///
+///   (C) 2024 J.Sebastien Toussaint - All Rights Reserved	 ///
+/// -------------------------------------------------------- ///
+///                  == FILE DESCRIPTION ==					 ///
+///  Auxiliary mathematics library allowing to perform		 ///
+///  linear algebra and trigonometry on 2D vector spaces,	 ///
+///  as well as simplifying a few complex functions.		 ///
+/// -------------------------------------------------------- ///
+
 #pragma once
 #include "toolbox.hpp"
 

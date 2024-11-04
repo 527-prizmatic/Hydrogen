@@ -1,3 +1,12 @@
+/// -------------------------------------------------------- ///
+///        == Hydrogen == Prototype C++ State Machine		 ///
+///   (C) 2024 J.Sebastien Toussaint - All Rights Reserved	 ///
+/// -------------------------------------------------------- ///
+///                  == FILE DESCRIPTION ==					 ///
+///  Straightforward texture manager, allowing to store		 ///
+///  various texture files for quick ID-based retrieval.	 ///
+/// -------------------------------------------------------- ///
+
 #pragma once
 #include "../toolbox/toolbox.hpp"
 

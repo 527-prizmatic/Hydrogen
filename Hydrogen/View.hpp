@@ -1,3 +1,11 @@
+/// -------------------------------------------------------- ///
+///        == Hydrogen == Prototype C++ State Machine		 ///
+///   (C) 2024 J.Sebastien Toussaint - All Rights Reserved	 ///
+/// -------------------------------------------------------- ///
+///                  == FILE DESCRIPTION ==					 ///
+///  View wrapper, for easily manipulating 2D cameras.		 ///
+/// -------------------------------------------------------- ///
+
 #pragma once
 #include "toolbox/toolbox.hpp"
 

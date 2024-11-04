@@ -1,3 +1,11 @@
+/// -------------------------------------------------------- ///
+///        == Hydrogen == Prototype C++ State Machine		 ///
+///   (C) 2024 J.Sebastien Toussaint - All Rights Reserved	 ///
+/// -------------------------------------------------------- ///
+///                  == FILE DESCRIPTION ==					 ///
+///  The main function - the entry point of all programs.	 ///
+/// -------------------------------------------------------- ///
+
 #include <iostream>
 #include <string>
 

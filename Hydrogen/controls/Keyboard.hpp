@@ -1,3 +1,13 @@
+/// -------------------------------------------------------- ///
+///        == Hydrogen == Prototype C++ State Machine		 ///
+///   (C) 2024 J.Sebastien Toussaint - All Rights Reserved	 ///
+/// -------------------------------------------------------- ///
+///                  == FILE DESCRIPTION ==					 ///
+///  Basic, flexible keyboard control handler, simplifying	 ///
+///  keybind management through the use of an easy-to-use	 ///
+///  keybind registry system.								 ///
+/// -------------------------------------------------------- ///
+
 #pragma once
 #include "../toolbox/toolbox.hpp"
 #include <vector>
