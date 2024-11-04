@@ -8,12 +8,13 @@ Texture::Texture() {
 }
 
 Texture::Texture(std::string _path, std::string _id) {
-	this->tex.loadFromFile(_path);
+	if (!this->tex.loadFromFile(_path))
+		this->tex = Texture::placeholder;
 	this->id = _id;
 }
 
 Texture::Texture(sf::Texture& _tex, std::string _id) {
-	this->tex = _tex;
+	this->tex = sf::Texture(_tex);
 	this->id = _id;
 }
 

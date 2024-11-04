@@ -1,5 +1,6 @@
 #include "Preinit.hpp"
 #include "Core.hpp"
+#include "resources/Textures.hpp"
 
 #include "states/Menu.hpp"
 #include "states/Game.hpp"
@@ -8,6 +9,7 @@ const std::string KeyOpenMenu = "OpenMenu";
 const std::string KeyOpenGame = "OpenGame";
 
 void preinit(Core& _core) {
+	Texture::init();
 	_core.registerState(MENU, (states::State*)(new states::Menu(&_core)));
 	_core.registerState(GAME, (states::State*)(new states::Game(&_core)));
 }
