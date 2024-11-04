@@ -1,6 +1,7 @@
 #include "Core.hpp"
 #include "BouncingBox.hpp"
 #include "Preinit.hpp"
+#include "resources/Textures.hpp"
 
 Core::Core() {
 	this->window = Window(800U, 600U, "pavouk", false);
@@ -45,6 +46,7 @@ void Core::render() {
 
 void Core::unload() {
 	this->stateReg[this->state]->unload();
+	Texture::clear();
 }
 
 Core& Core::registerState(GameState _id, states::State* _state) {

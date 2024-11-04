@@ -43,6 +43,12 @@
     <Filter Include="Header Files\Engine\Core Systems">
       <UniqueIdentifier>{56218a91-127a-48d9-9901-70caa41f1ed4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Engine\Resources">
+      <UniqueIdentifier>{9a1319a2-21e5-448c-8e3d-44cf0f132c3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Engine\Resources">
+      <UniqueIdentifier>{d9cac6d0-1866-4ddb-a8cc-251ece4dc54b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -86,6 +92,9 @@
     </ClCompile>
     <ClCompile Include="View.cpp">
       <Filter>Source Files\Engine\Core Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="resources\Textures.cpp">
+      <Filter>Source Files\Engine\Resources</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -133,6 +142,9 @@
     </ClInclude>
     <ClInclude Include="View.hpp">
       <Filter>Header Files\Engine\Core Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="resources\Textures.hpp">
+      <Filter>Header Files\Engine\Resources</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
