@@ -15,13 +15,15 @@ int main(int argc, char** argv) {
 	Core core;
 
 	while (core.windowIsOpen()) {
-		core.init();
-		core.update();
+		core.init(); // Resource initialization, only if requested
+		core.update(); // Tick updates
 
-		core.beginRendering();
-		core.render();
-		core.endRendering();
+		core.beginRendering(); // Clears render window
+		core.render(); // Rendering
+		core.endRendering(); // Displays window on-screen
 
-		core.changeState();
+		core.changeState(); // Handles queued state changes
+
+		std::cout << random::uniformSum(12, 1.f) << std::endl;
 	}
 }

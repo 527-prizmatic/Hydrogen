@@ -28,7 +28,7 @@ public:
 	Texture(sf::Texture& _tex, std::string _id);
 
 	/// Initializes the texture buffer and preloads the placeholder texture.
-	static void init();
+	static void preinit();
 	/// Preloads a texture from the given path and into the texture buffer.
 	static void preload(std::string _path, std::string _id);
 	/// Unloads the texture with the given string ID from the texture buffer.
