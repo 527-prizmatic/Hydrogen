@@ -1,7 +1,5 @@
 #include "Window.hpp"
 
-sf::Sprite Window::renderSpr;
-
 Window::Window() {
 	this->size = sf::Vector2u(800U, 600U);
 	this->title = "Window";

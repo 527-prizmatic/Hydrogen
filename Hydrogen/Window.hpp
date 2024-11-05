@@ -23,7 +23,7 @@ private:
 	sf::Event evt; /// Event handler
 	float aspectRatio; /// Aspect ratio of the linked window
 
-	static sf::Sprite renderSpr; /// Used to render the linked render texture onto the linked window
+	inline static sf::Sprite renderSpr; /// Used to render the linked render texture onto the linked window
 
 	/// Performs some common initialization operations, such as creating the linked window and render texture.
 	void setup();

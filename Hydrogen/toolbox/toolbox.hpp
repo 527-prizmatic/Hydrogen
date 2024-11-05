@@ -15,8 +15,11 @@
 #include <list>
 #include <optional>
 
+#pragma warning (push)
+#pragma warning (disable : 26495)
 #include "SFML/System.hpp"
 #include "SFML/Graphics.hpp"
+#pragma warning (pop)
 
 #include "time.hpp"
 #include "random.hpp"

@@ -13,7 +13,7 @@ namespace random {
 		return int_32() & 0x7FFFFFFF;
 	}
 
-	int range(int _min, int _upper) {
+	int int_range(int _min, int _upper) {
 		return _min + (uint_32() % (_upper - _min + 1));
 	}
 
@@ -22,15 +22,12 @@ namespace random {
 		return (float)r / (float)0x7FFFFFFF;
 	}
 
-	float unit(float _max) {
-		int r = int_32() & 0x7FFFFFFF;
-		return (float)r / (float)0x7FFFFFFF * _max;
+	float float_range(float _max) {
+		return unit() * _max;
 	}
 
-	float unit(float _min, float _max) {
-		int r = int_32() & 0x7FFFFFFF;
-		r = (float)r / (float)0x7FFFFFFF * _max;
-		return r * (_max - _min) + _min;
+	float float_range(float _min, float _max) {
+		return unit() * (_max - _min) + _min;
 	}
 
 	bool chance(float _chance) {
@@ -40,7 +37,7 @@ namespace random {
 	int diceroll(int _count, int _die) {
 		int r = 0;
 		for (int i = 0; i < _count; i++) {
-			r += range(1, _die);
+			r += int_range(1, _die);
 		}
 		return r;
 	}

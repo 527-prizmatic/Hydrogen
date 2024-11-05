@@ -1,8 +1,5 @@
 #include "Textures.hpp"
 
-sf::Texture Texture::placeholder;
-std::list<Texture*> Texture::texList;
-
 Texture::Texture() {
 	this->id = "gustavo";
 }

@@ -17,16 +17,16 @@ namespace random {
 	unsigned int uint_32();
 
 	/// \return A uniformly random signed 32-bit integer between _min and _max
-	int range(int _min, int _max);
+	int int_range(int _min, int _max);
 
 	/// Return Uniformly random floating-point number between 0 and 1
 	float unit();
 
 	/// Return Uniformly random floating-point number between 0 and _max
-	float unit(float _max);
+	float float_range(float _max);
 
 	/// Return Uniformly random floating-point number between _min and _max
-	float unit(float _min, float _max);
+	float float_range(float _min, float _max);
 
 	/// \return true with a probability of _chance; false otherwise
 	bool chance(float _chance);

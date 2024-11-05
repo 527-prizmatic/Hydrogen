@@ -16,8 +16,8 @@ private:
 	sf::Texture tex; /// Texture stored within
 	std::string id; /// String ID for quick lookup
 
-	static sf::Texture placeholder; /// Placeholder texture to replace unloaded or erroneous textures
-	static std::list<Texture*> texList; /// Texture buffer
+	inline static sf::Texture placeholder; /// Placeholder texture to replace unloaded or erroneous textures
+	inline static std::list<Texture*> texList; /// Texture buffer
 public:
 	/// Creates a completely empty texture.
 	Texture(); 
