@@ -9,7 +9,7 @@ const std::string KeyOpenMenu = "OpenMenu";
 const std::string KeyOpenGame = "OpenGame";
 
 void preinit(Core& _core) {
-	Texture::init();
+	Texture::preinit();
 	_core.registerState(MENU, (states::State*)(new states::Menu(&_core)));
 	_core.registerState(GAME, (states::State*)(new states::Game(&_core)));
 }
