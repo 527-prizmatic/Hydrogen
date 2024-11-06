@@ -24,6 +24,6 @@ int main(int argc, char** argv) {
 
 		core.changeState(); // Handles queued state changes
 
-		std::cout << random::uniformSum(12, 1.f) << std::endl;
+//		std::cout << random::uniformSum(12, 1.f) << std::endl;
 	}
 }

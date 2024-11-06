@@ -47,6 +47,7 @@ public:
 	void draw(sf::Drawable& _obj);
 
 	bool isOpen() const { return this->window->isOpen(); }
+	/// \return Whether the linked window is focused. Used to disable most CPU-consuming and input handling processes when the window runs in the background.
 	bool hasFocus() const { return this->window->hasFocus(); }
 	/// \return Size of the linked render window, in pixels
 	sf::Vector2u getSize() const { return this->size; }
@@ -55,9 +56,11 @@ public:
 	/// Used for computing view size.
 	sf::Vector2f forceAspectRatio(sf::Vector2f _input, float _ratio);
 
-	/// \return The currently active view
+	/// \return The currently active view, or nullptr if there is none
 	View* getView();
+	/// Changes the window's active view
 	inline void setView(View* _v) { this->currentView = _v; }
+	/// Unlinks the active view, reverting to rendering on the window's default view
 	inline void resetView() { this->currentView.reset(); }
 	/// \return Whether the linked window is displayed through a custom view or the window's default internal view
 	inline bool hasView() { return this->currentView.has_value(); }
