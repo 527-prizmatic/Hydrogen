@@ -2,6 +2,9 @@
 ///        == Hydrogen == Prototype C++ State Machine		 ///
 ///   (C) 2024 J.Sebastien Toussaint - All Rights Reserved	 ///
 /// -------------------------------------------------------- ///
+///						 == FILE NAME ==					 ///
+///						 custom_math.hpp					 ///
+/// -------------------------------------------------------- ///
 ///                  == FILE DESCRIPTION ==					 ///
 ///  Auxiliary mathematics library allowing to perform		 ///
 ///  linear algebra and trigonometry on 2D vector spaces,	 ///

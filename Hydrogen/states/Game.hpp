@@ -2,6 +2,9 @@
 ///        == Hydrogen == Prototype C++ State Machine		 ///
 ///   (C) 2024 J.Sebastien Toussaint - All Rights Reserved	 ///
 /// -------------------------------------------------------- ///
+///						 == FILE NAME ==					 ///
+///							Game.hpp						 ///
+/// -------------------------------------------------------- ///
 ///                  == FILE DESCRIPTION ==					 ///
 ///  Example implementation of the gamestate blueprint.		 ///
 /// -------------------------------------------------------- ///

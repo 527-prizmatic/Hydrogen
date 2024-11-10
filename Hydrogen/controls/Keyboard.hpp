@@ -2,6 +2,9 @@
 ///        == Hydrogen == Prototype C++ State Machine		 ///
 ///   (C) 2024 J.Sebastien Toussaint - All Rights Reserved	 ///
 /// -------------------------------------------------------- ///
+///						 == FILE NAME ==					 ///
+///						   Keyboard.hpp						 ///
+/// -------------------------------------------------------- ///
 ///                  == FILE DESCRIPTION ==					 ///
 ///  Basic, flexible keyboard control handler, simplifying	 ///
 ///  keybind management through the use of an easy-to-use	 ///
