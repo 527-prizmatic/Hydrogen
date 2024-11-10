@@ -146,5 +146,8 @@
     <ClInclude Include="resources\Textures.hpp">
       <Filter>Header Files\Engine\Resources</Filter>
     </ClInclude>
+    <ClInclude Include="resources\Resource.hpp">
+      <Filter>Header Files\Engine\Resources</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

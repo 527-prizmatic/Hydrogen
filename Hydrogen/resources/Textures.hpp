@@ -9,6 +9,7 @@
 
 #pragma once
 #include "../toolbox/toolbox.hpp"
+#include "Resource.hpp"
 
 /// Data storage node for the texture buffer
 class Texture {
@@ -19,6 +20,7 @@ private:
 	inline static sf::Texture placeholder; /// Placeholder texture to replace unloaded or erroneous textures
 	inline static std::list<Texture*> texList; /// Texture buffer
 public:
+
 	/// Creates a completely empty texture.
 	Texture(); 
 	/// Creates a texture from a file path and a string ID.
@@ -38,4 +40,6 @@ public:
 
 	/// \return A texture corresponding to the given string ID, or a placeholder if none is found
 	static const sf::Texture& getTexture(std::string _id);
+	/// Produces a full texture file path based on the file's name.
+	inline static std::string path(std::string _path) { return Resource::path("texture/" + _path); }
 };
