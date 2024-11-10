@@ -1,18 +1,14 @@
 #include "Textures.hpp"
 
-Texture::Texture() {
-	this->id = "gustavo";
-}
+Texture::Texture():Resource("gustavo") { }
 
-Texture::Texture(std::string _path, std::string _id) {
+Texture::Texture(std::string _path, std::string _id):Resource(_id) {
 	if (!this->tex.loadFromFile(_path))
 		this->tex = Texture::placeholder;
-	this->id = _id;
 }
 
-Texture::Texture(sf::Texture& _tex, std::string _id) {
+Texture::Texture(sf::Texture& _tex, std::string _id):Resource(_id) {
 	this->tex = sf::Texture(_tex);
-	this->id = _id;
 }
 
 void Texture::preinit() {

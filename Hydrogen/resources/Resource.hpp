@@ -2,6 +2,9 @@
 ///        == Hydrogen == Prototype C++ State Machine		 ///
 ///   (C) 2024 J.Sebastien Toussaint - All Rights Reserved	 ///
 /// -------------------------------------------------------- ///
+///						 == FILE NAME ==					 ///
+///						   Resource.hpp						 ///
+/// -------------------------------------------------------- ///
 ///                  == FILE DESCRIPTION ==					 ///
 ///  Common interface for external multimedia resources,	 ///
 ///  such as textures, sounds, and typefaces.				 ///
@@ -13,12 +16,11 @@
 /// Prototype resource storage node.
 /// An extension to this class must always contain a SFML-managed resource, such as a sf::Texture or sf::Sound.
 class Resource {
-private:
+protected:
 	std::string id; /// String ID for quick lookup
-public:
 
 	/// Creates a completely empty resource.
-	Resource() = delete;
+	Resource(std::string _id) { this->id = _id; }
 	/// Creates a resource from a file path and a string ID.
 	Resource(std::string _path, std::string _id) = delete;
 

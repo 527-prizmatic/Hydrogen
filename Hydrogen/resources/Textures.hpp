@@ -15,10 +15,9 @@
 #include "Resource.hpp"
 
 /// Data storage node for the texture buffer
-class Texture {
+class Texture : public Resource {
 private:
 	sf::Texture tex; /// Texture stored within
-	std::string id; /// String ID for quick lookup
 
 	inline static sf::Texture placeholder; /// Placeholder texture to replace unloaded or erroneous textures
 	inline static std::list<Texture*> texList; /// Texture buffer
